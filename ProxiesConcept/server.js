@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT;
+const PORT = 3003;
 
 app.listen(PORT, (req,res)=>{
     console.log(`App running on Port ${PORT}`);
