@@ -41,4 +41,42 @@ Pobj.then((rollNos)=>{
 })
 
 
+//Promise Chaining
 
+const newPromise = new Promise(
+  function(resolve,reject){
+    setTimeout(()=>resolve(1),1000)
+  }
+).then(function(result){
+  console.log('result is', result)
+  return result*2;
+}).then(function(result){
+  console.log('result 2 is', result)
+  return result*2;
+}).catch((err)=>{
+  console.log('err is',err)
+})
+
+
+//Promises.all => Takes an array of Promises as an input and it gets resolved when either
+// All Of the Promises gets resolved
+// Or any one of the Promises get rejected
+
+Promise.all([Pobj,newPromise])
+.then((result)=>{console.log('Done')})
+.catch((err)=>{console.log(err)})
+
+
+
+//Promise.race => Returns promise Instance which is firstly resolved / rejected
+
+const p1 = new Promise(function(resolve,reject){
+  setTimeout(resolve, 500, 'p1');
+})
+const p2 = new Promise(function(resolve,reject){
+  setTimeout(resolve, 100, 'p2');
+})
+
+Promise.race([p1,p2])
+.then((resolvedResult)=>console.log('Race result', resolvedResult))
+.catch((err)=>console.log(err))
