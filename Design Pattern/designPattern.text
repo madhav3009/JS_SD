@@ -1,0 +1,23 @@
+Design Pattern - It is a general solution to common software design probelms.
+
+3 main types : Creational, Structural, Behavioural Patterns
+
+Creational Patterns -  It provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. 
+                       This gives program more flexibility in deciding which objects need to be created for a given use case
+
+Structural Patterns - These design patterns concern class and object composition. 
+                      Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.
+
+Behavioural Patterns - These design patterns are specifically concerned with communication between objects.
+
+Patterns to cover
+
+1. Factory Design Pattern
+2. Singleton Design Pattern
+3. Builder Design Pattern
+
+1. Proxy Design Pattern
+
+1. Strategy Design Pattern
+2. Iterator Design Pattern
+3. Observer Design Pattern
